@@ -16,10 +16,17 @@
 
 ### Решение 1
 
+При сканирование nmap, в Fail2Ban никаких событий не было, поскольку это не попытки авторизации, а просто сетевое сканирование.
+А вот Suricata реагирует на все события, включая 2ое задание при переборе пароля.
 
-![alt text](https://github.com/Sayward-k8/sdb-hw-13-03/blob/main/img/1.png)
-![alt text](https://github.com/Sayward-k8/sdb-hw-13-03/blob/main/img/1.1.png)
-![alt text](https://github.com/Sayward-k8/sdb-hw-13-03/blob/main/img/1.2.png)
+Как видно на скриншоте после сканирование определен [Classification: Potentially Bad Traffic] 
+
+ - ET SCAN Suspicious inbound to mySQL port 3306
+ - ET SCAN Suspicious inbound to PostgreSQL port 5432
+ - ET SCAN Suspicious inbound to Oracle SQL port 1521
+ - ET SCAN Suspicious inbound to MSSQL port 1433
+
+![alt text](https://github.com/Sayward-k8/sdb-hw-13-03/blob/main/img/1.0.png)
 
 ### Задание 2
 
